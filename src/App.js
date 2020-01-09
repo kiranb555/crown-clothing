@@ -10,6 +10,7 @@ import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils.js";
 
+junk piuwrbg unpgr
 class App extends Component {
   unsubscribeFromAuth = null;
 
