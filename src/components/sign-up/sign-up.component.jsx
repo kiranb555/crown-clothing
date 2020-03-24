@@ -6,7 +6,8 @@ import {
   auth,
   createUserProfileDocument
 } from "../../firebase/firebase.utils.js";
-import "./sign-up.style.scss";
+
+import { SignUpHolder,SignUpTitle } from "./sign-up.style";
 
 class SignUp extends Component {
   state = {
@@ -53,8 +54,8 @@ class SignUp extends Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
-      <div className="sign-up">
-        <div className="title">I do not have a account</div>
+      <SignUpHolder>
+        <SignUpTitle>I do not have a account</SignUpTitle>
         <span>Sign up with your email password</span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
@@ -93,7 +94,7 @@ class SignUp extends Component {
             Sign Up{" "}
           </CustomButton>
         </form>
-      </div>
+      </SignUpHolder>
     );
   }
 }
