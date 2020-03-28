@@ -12,6 +12,7 @@ import CheckoutPage from "./pages/checkout/checkout.component.jsx";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils.js";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
+
 class App extends Component {
   unsubscribeFromAuth = null;
 
@@ -32,6 +33,10 @@ class App extends Component {
         });
       }
       setCurrentUser(userAuth);
+      // addCollectionAndDocuments(
+      //   "collections",
+      //   collections.map(({ title, items }) => ({ title, items }))
+      // );
     });
   }
   componentWillUnmount() {
